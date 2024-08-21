@@ -767,7 +767,7 @@ int FINUFFT_MAKEPLAN(int type, int dim, BIGINT *n_modes, int iflag, int ntrans, 
     }
     if (p->opts.debug)
       printf("[%s] FFTW plan (mode %d, nthr=%d):\t%.3g s\n", __func__, p->opts.fftw,
-             nthr_fft, timer.elapsedsec());
+             FFTW_GET_NTHREADS(), timer.elapsedsec());
     delete[] ns;
 #endif
 
